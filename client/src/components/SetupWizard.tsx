@@ -206,6 +206,9 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
           </div>
         </motion.div>
       </AnimatePresence>
+      <div className="absolute bottom-6 left-0 right-0 text-center">
+        <p className="text-[#C4BAB2] text-[10px] tracking-[0.15em] uppercase">created by charley for angie</p>
+      </div>
     </div>
   );
 }

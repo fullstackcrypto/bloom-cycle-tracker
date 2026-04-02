@@ -19,6 +19,7 @@ import LogView from "@/components/views/LogView";
 import CalendarView from "@/components/views/CalendarView";
 import InsightsView from "@/components/views/InsightsView";
 import SettingsView from "@/components/views/SettingsView";
+import InstallPrompt from "@/components/InstallPrompt";
 
 export default function Home() {
   const { profile, logs, loading, saveProfile, saveLogs, resetAll } = useBloomStorage();
@@ -62,6 +63,7 @@ export default function Home() {
       <Toast message={toast} />
 
       <div className="hide-scrollbar overflow-y-auto" style={{ minHeight: "calc(100vh - 80px)" }}>
+        {view === "home" && <InstallPrompt />}
         {view === "home" && (
           <HomeView
             profile={profile}
@@ -102,6 +104,10 @@ export default function Home() {
             flash={flash}
           />
         )}
+        {/* Credit footer — visible on all views */}
+        <div className="text-center py-4 mt-2">
+          <p className="text-[#C4BAB2] text-[10px] tracking-[0.15em] uppercase">created by charley for angie</p>
+        </div>
       </div>
 
       <NavBar view={view} setView={setView} setSelectedDate={setSelectedDate} />

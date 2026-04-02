@@ -1,0 +1,26 @@
+{
+  "name": "Bloom — Cycle Tracker",
+  "short_name": "Bloom",
+  "description": "Your cycle, beautifully simple. Track your period, moods, and symptoms — all data stays on your device.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFAF7",
+  "theme_color": "#D94F5C",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://d2xsxph8kpxj0f.cloudfront.net/310519663508251297/gzdzzibSnzHDdKrMCz9XFG/bloom-icon-192x192_69c09655.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://d2xsxph8kpxj0f.cloudfront.net/310519663508251297/gzdzzibSnzHDdKrMCz9XFG/bloom-icon-512x512_1d404316.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle"],
+  "lang": "en"
+}
