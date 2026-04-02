@@ -29,11 +29,15 @@ export default function HomeView({ profile, setView, setSelectedDate }: HomeView
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="px-5 pt-5 pb-6"
     >
+      {/* Stable SEO headings — visually hidden, meaningful for search and screen readers */}
+      <h1 className="sr-only">Private cycle tracking made simple</h1>
+      <h2 className="sr-only">Track periods, moods, symptoms, and cycle insights</h2>
+
       {/* Header */}
       <div className="mb-1">
-        <h1 className="font-serif text-[26px] text-[#4A3F3A]">
+        <p className="font-serif text-[26px] text-[#4A3F3A]">
           {profile.name ? `Hi ${profile.name}` : "Hey there"} 🌸
-        </h1>
+        </p>
         <p className="text-[#A99E98] text-[13px] mt-1">{formatDate(today)}</p>
       </div>
 

@@ -146,7 +146,7 @@ export default function SettingsView({ profile, saveProfile, resetAll, flash }: 
 
       {/* Privacy badge */}
       <div className="bg-[#EEFAF2] text-[#3DAA6D] px-4 py-2.5 rounded-xl text-[13px] font-semibold text-center mt-6">
-        🔒 All data stored locally on this device
+        🔒 Your cycle data is stored locally on this device
       </div>
 
       {/* Reset */}

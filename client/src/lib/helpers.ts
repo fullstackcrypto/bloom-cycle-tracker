@@ -3,6 +3,10 @@
  * Helper functions for date math and cycle calculations.
  */
 
+// Uses local calendar date parts (not UTC) so date keys always match what the
+// user sees on their device, regardless of timezone. toISOString() was
+// intentionally avoided because it returns UTC dates, which shift by a day for
+// users in UTC+ timezones near midnight.
 export const toKey = (d: Date): string =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 

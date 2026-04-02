@@ -50,7 +50,7 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
               <h1 className="font-serif text-4xl text-[#D94F5C] mb-1">Bloom</h1>
               <p className="text-[#8A7F7A] text-[15px] mb-2">Your cycle, beautifully simple</p>
               <div className="bg-[#EEFAF2] text-[#3DAA6D] px-4 py-2.5 rounded-xl text-[13px] font-semibold text-center mt-4 w-full">
-                🔒 100% private — data stays on your device
+                🔒 Your cycle data is stored locally on your device
               </div>
               <input
                 className="w-full mt-4 px-4 py-3.5 border-2 border-[#E8E0DA] rounded-2xl text-base bg-[#FDFAF7] text-[#4A3F3A] placeholder:text-[#C4BAB2] focus:border-[#D94F5C]/30 transition-colors"

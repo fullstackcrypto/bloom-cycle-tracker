@@ -1,4 +1,9 @@
 name: Deploy to GitHub Pages
+# NOTE: This workflow deploys to GitHub Pages as a static site with a sub-path
+# base (/bloom-cycle-tracker/). It is separate from the Express server
+# deployment described in README.md (used for bloomcycle.my). Do not use this
+# workflow's build output with the Express server — the --base flag bakes in
+# the wrong asset paths for root-served deployments.
 
 on:
   push:
