@@ -6,6 +6,7 @@
 
 import { useState, useMemo } from "react";
 import type { Profile } from "@/lib/constants";
+import { toKey } from "@/lib/helpers";
 import { motion, AnimatePresence } from "framer-motion";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663508251297/gzdzzibSnzHDdKrMCz9XFG/bloom-hero-bg-7eit49EGcfcC9iMxcgeVBK.webp";
@@ -82,7 +83,7 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
                 <p className="text-[#A99E98] text-[13px] mb-4">Best guess is fine! Tap a date below.</p>
                 <div className="w-full max-h-[200px] overflow-y-auto rounded-2xl border-2 border-[#E8E0DA] bg-[#FDFAF7] hide-scrollbar">
                   {recentDates.map((d) => {
-                    const key = d.toISOString().split('T')[0];
+                    const key = toKey(d);
                     const label = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
                     const isSelected = lastPeriod === key;
                     return (

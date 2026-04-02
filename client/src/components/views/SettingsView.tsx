@@ -6,6 +6,7 @@
 
 import { useState } from "react";
 import type { Profile } from "@/lib/constants";
+import { toKey } from "@/lib/helpers";
 import { motion } from "framer-motion";
 
 interface SettingsViewProps {
@@ -37,7 +38,7 @@ function DateListPicker({ value, onChange }: { value: string | undefined; onChan
       {open && (
         <div className="mt-2 max-h-[180px] overflow-y-auto rounded-2xl border-2 border-[#E8E0DA] bg-[#FDFAF7]">
           {dates.map((d) => {
-            const key = d.toISOString().split("T")[0];
+            const key = toKey(d);
             const label = d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
             const isSelected = value === key;
             return (

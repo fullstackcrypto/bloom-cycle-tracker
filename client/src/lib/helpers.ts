@@ -3,7 +3,8 @@
  * Helper functions for date math and cycle calculations.
  */
 
-export const toKey = (d: Date): string => d.toISOString().split("T")[0];
+export const toKey = (d: Date): string =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 
 export const todayKey = (): string => toKey(new Date());
 
